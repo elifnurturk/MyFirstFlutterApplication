@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           RaisedButton(
-                            color: Colors.orange,
+                            color: Colors.blueGrey,
                             child: Text("Login"),
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             },
                           ),
                           RaisedButton(
-                            color: Colors.orange,
+                            color: Colors.blueGrey,
                             child: Text("Join us"),
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));

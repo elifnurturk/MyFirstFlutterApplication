@@ -9,6 +9,7 @@ class Register extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(),
       body: Stack(
         children: <Widget>[
           Padding(
@@ -50,16 +51,10 @@ class Register extends StatelessWidget{
 
                         ),
                         RaisedButton(
-                          color: Colors.orange,
+                          color: Colors.blueGrey,
                           child: Text("Register now!"),
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-                          },
-                        ),
-                        RaisedButton(
-                          child: Text("Bu Sayfayı Kapat"),
-                          onPressed: (){
-                            Navigator.pop(context);
                           },
                         ),
                       ]

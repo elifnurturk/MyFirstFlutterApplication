@@ -113,10 +113,20 @@ class kartlar extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
+              Container(
+                width: 300,
+                child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Image.asset("images/falci.JPG", ),
+                    ]
+                ),
+              ),
               Text(
                   "Aklındaki sorular için bir kart seç",
                 textWidthBasis: TextWidthBasis.parent,
-                style: TextStyle(height: 5,
+                style: TextStyle(
                 fontSize: 20,
                     fontStyle: FontStyle.italic,
                 ),
