@@ -10,7 +10,8 @@ class karoas extends StatelessWidget {
           title: Text("             KARO AS",
             style: TextStyle(
                 color: Colors.black
-            ),),
+            ),
+          ),
         ),
       body: Container(
         color: Colors.grey,
