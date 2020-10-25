@@ -2,6 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:proje1/kartanlam.dart';
 import 'package:flutter/src/widgets/basic.dart';
+import 'package:proje1/profilim.dart';
+import 'package:proje1/settings.dart';
+
+import 'arkadaslar.dart';
+import 'main.dart';
 
 class kartlar extends StatelessWidget {
   @override
@@ -10,6 +15,56 @@ class kartlar extends StatelessWidget {
       appBar: AppBar(
         title: Text("Kartlarım"),
       ),
+        drawer: Drawer(
+          child:
+          ListView(
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                accountName: Text("Elif Nur Türk"),
+                accountEmail: Text("elif12345@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage("images/pp.JPG"),
+                ),
+              ),
+              ListTile(
+                  title: Text("Home Page"),
+                  leading: Icon(Icons.account_balance),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
+                  }
+              ),
+              ListTile(
+                  title: Text("My Profile"),
+                  leading: Icon(Icons.account_box),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => profilim()));
+                  }
+              ),
+
+              ListTile(
+                  title: Text("Friends"),
+                  leading: Icon(Icons.people),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => arkadaslar()));
+                  }
+              ),
+              ListTile(
+                  title: Text("Settings"),
+                  leading: Icon(Icons.settings),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
+                  }
+              ),
+              ListTile(
+                  title: Text("Log Out"),
+                  leading: Icon(Icons.undo),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                  }
+              ),
+            ],
+          ),
+        ),
         body:
         Container(
           decoration: BoxDecoration(

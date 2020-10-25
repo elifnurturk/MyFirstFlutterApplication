@@ -58,56 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: Drawer(
-        child:
-        ListView(
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: Text("Elif Nur Türk"),
-              accountEmail: Text("elif12345@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("images/pp.JPG"),
-              ),
-            ),
-            ListTile(
-              title: Text("Home Page"),
-              leading: Icon(Icons.account_balance),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
-              }
-            ),
-            ListTile(
-              title: Text("My Profile"),
-              leading: Icon(Icons.account_box),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => profilim()));
-                }
-            ),
 
-            ListTile(
-                title: Text("Friends"),
-                leading: Icon(Icons.people),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => arkadaslar()));
-                }
-            ),
-            ListTile(
-                title: Text("Settings"),
-                leading: Icon(Icons.settings),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
-                }
-            ),
-            ListTile(
-                title: Text("Log Out"),
-                leading: Icon(Icons.undo),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-                }
-            ),
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
@@ -147,21 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.orange,
                             child: Text("Login"),
                             onPressed: (){
-                              if(myControl1=="elif")
-                                {
-                                  if(myControl2=="12345")
-                                    {
-                                      print("Giriş başarılı");
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
-                                    }
-                                  else{
-                                    print("Kullanıcı adı ve şifre yanlış.");
-                                  }
-                                }
-                              else
-                                {
-                                print("Kullanıcı adı ve şifre yanlış.");
-                                }
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
+
                             },
                           ),
                           RaisedButton(
