@@ -7,7 +7,11 @@ class arkadaslar extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Friends"),
+        title: Text("               Friends",
+          style: TextStyle(
+              color: Colors.black
+          ),),
+
       ),
       body:  ListView(
           children: ListTile.divideTiles(

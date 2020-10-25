@@ -8,13 +8,16 @@ class profilim extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("           My Profile"),
+        title: Text("             My Profile",
+          style: TextStyle(
+              color: Colors.black
+          ),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(0),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.lightBlueAccent,
+            color: Colors.black12,
             border: Border.all(width: 3),
             borderRadius: BorderRadius.circular(1),
           ),

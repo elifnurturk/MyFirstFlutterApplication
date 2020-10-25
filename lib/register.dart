@@ -15,8 +15,8 @@ class Register extends StatelessWidget{
             padding: const EdgeInsets.all(0),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.lightBlueAccent,
-                border: Border.all(width: 3),
+                color: Colors.black12,
+                border: Border.all(width: 10),
                 borderRadius: BorderRadius.circular(1),
               ),
               child: Padding(

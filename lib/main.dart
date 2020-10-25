@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(title: '                 GİRİŞ'),
+      home: MyHomePage(title: '                           GİRİŞ',
+      ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (RouteSettings settings){
         return null;
@@ -66,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(0),
               child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Colors.black12,
                     border: Border.all(width: 3),
                     borderRadius: BorderRadius.circular(1),
                   ),

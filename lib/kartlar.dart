@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:proje1/kartanlam.dart';
 import 'package:flutter/src/widgets/basic.dart';
 import 'package:proje1/profilim.dart';
@@ -13,62 +14,98 @@ class kartlar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kartlarım"),
+        title: Text(
+          "              Kartlarım",
+          style: TextStyle(
+            color: Colors.black
+          ),
+        ),
       ),
         drawer: Drawer(
           child:
-          ListView(
-            children: <Widget>[
-              UserAccountsDrawerHeader(
-                accountName: Text("Elif Nur Türk"),
-                accountEmail: Text("elif12345@gmail.com"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage("images/pp.JPG"),
-                ),
-              ),
-              ListTile(
-                  title: Text("Home Page"),
-                  leading: Icon(Icons.account_balance),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
-                  }
-              ),
-              ListTile(
-                  title: Text("My Profile"),
-                  leading: Icon(Icons.account_box),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => profilim()));
-                  }
-              ),
+          Container(
+            color: Colors.grey,
+            child:
+                ListView(
+                  children: <Widget>[
+                    UserAccountsDrawerHeader(
+                      accountName: Text("Elif Nur Türk",
+                        style: TextStyle(
+                            color: Colors.black
+                        ),),
+                      accountEmail: Text("elif12345@gmail.com",style: TextStyle(
+                          color: Colors.black
+                      ),
+                      ),
 
-              ListTile(
-                  title: Text("Friends"),
-                  leading: Icon(Icons.people),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => arkadaslar()));
-                  }
-              ),
-              ListTile(
-                  title: Text("Settings"),
-                  leading: Icon(Icons.settings),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
-                  }
-              ),
-              ListTile(
-                  title: Text("Log Out"),
-                  leading: Icon(Icons.undo),
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-                  }
-              ),
-            ],
+                      currentAccountPicture: CircleAvatar(
+                          backgroundImage: AssetImage("images/pp.JPG"),
+                        ),
+                      ),
+                    ListTile(
+                        title: Text("Home Page"),
+                        leading: Icon(Icons.account_balance),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => kartlar()));
+                        }
+                    ),
+                    Container(
+                      color: Colors.blueGrey,
+                      height: 1,
+                    ),
+                    ListTile(
+                        title: Text("My Profile"),
+                        leading: Icon(Icons.account_box),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => profilim()));
+                        }
+                    ),
+                    Container(
+                      color: Colors.blueGrey,
+                      height: 1,
+                    ),
+                    ListTile(
+                        title: Text("Friends"),
+                        leading: Icon(Icons.people),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => arkadaslar()));
+                        }
+                    ),
+                    Container(
+                      color: Colors.blueGrey,
+                      height: 1,
+                    ),
+                    ListTile(
+                        title: Text("Settings"),
+                        leading: Icon(Icons.settings),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
+                        }
+                    ),
+                    Container(
+                      color: Colors.blueGrey,
+                      height: 1,
+                    ),
+                    ListTile(
+                        title: Text("Log Out"),
+                        leading: Icon(Icons.undo),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+                        }
+                    ),
+                    Container(
+                      color: Colors.blueGrey,
+                      height: 1,
+                    ),
+                  ],
+            )
           ),
         ),
+
         body:
         Container(
           decoration: BoxDecoration(
-            color: Colors.lightBlueAccent,
+            color: Colors.black26,
             border: Border.all(width: 3),
             borderRadius: BorderRadius.circular(1),
           ),
@@ -78,9 +115,16 @@ class kartlar extends StatelessWidget {
             children: <Widget>[
               Text(
                   "Aklındaki sorular için bir kart seç",
-                style: TextStyle(backgroundColor: Colors.orange,height: 10 ),
+                textWidthBasis: TextWidthBasis.parent,
+                style: TextStyle(height: 5,
+                fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                ),
               ),
-              Row(children: <Widget>[
+              Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
                 InkWell(
                   child: Image.asset("images/karoas.png", width: 85, height: 85),
                   onTap: () {
@@ -106,6 +150,8 @@ class kartlar extends StatelessWidget {
 
           ]),
               Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     InkWell(
                       child: Image.asset("images/macaas.png", width: 85, height: 85),
@@ -130,6 +176,8 @@ class kartlar extends StatelessWidget {
                     ),
                   ]),
               Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   InkWell(
                     child: Image.asset("images/sinekas.png", width: 85, height: 85),
